@@ -1,0 +1,14 @@
+*CMOS invertor
+Vin 1 0 PULSE[0 5 100n 10n 10n 50n 170n]
+Vdd 2 0 DC 5
+M1 3 1 2 2 MOS1
+.model MOS1 PMOS
+M2 3 1 0 0 MOS2
+.model MOS2 NMOS
+.tran 10u 100u
+.control
+run
+display
+plot V(1) V(3)
+.endc
+.end

@@ -1,0 +1,11 @@
+*rectifier:exp2
+D1 1 2 0.7
+R1 2 0 10k
+Vin 1 0 sin(0 4 1k)
+.tran 1n 2m
+.control
+run
+display
+plot V(1) V(2)
+.endc
+.end

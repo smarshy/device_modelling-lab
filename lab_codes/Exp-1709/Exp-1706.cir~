@@ -1,0 +1,26 @@
+*RC phase shift
+V1 4 0 DC 12
+R1 4 2 47k
+R2 4 3 2.2k
+R3 2 0 10k
+R4 1 0 680
+C1 3 5 1u
+R5 5 0 10k
+C2 3 6 0.01u
+R7 6 0 4.7k
+R8 7 0 4.7k
+C3 6 7 0.01u
+C4 7 8 0.01u
+R6 8 2 4.7k
+C5 1 0 2.2u
+Q1 3 2 1 MOD1
+.model MOD1 NPN
+.tran 0.1u 1m
+.control
+run
+display
+plot v(3)
+plot v(6)
+.endc
+.end
+

@@ -1,0 +1,11 @@
+*RC ckt:labex1
+R1 1 2 1k
+C1 2 0 0.1n
+Vin 1 0 PULSE(0 5 100n 10n 10n 50n 170n)
+.tran 10n 500n
+.control
+run
+display
+plot V(1) V(2)
+.endc
+.end

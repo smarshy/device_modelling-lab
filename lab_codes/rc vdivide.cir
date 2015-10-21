@@ -1,0 +1,13 @@
+*rc vdivide
+.include vdivide.cir
+Xdiv1 2 3 0 vdivide
+R0 1 2 1k
+C1 2 0 1n
+Vin 1 0 PULSE (0 5 100n 10n 10n 50n 170n)
+.tran 10n 200n
+.control
+run
+display
+plot v(1) v(2)
+.endc
+.end

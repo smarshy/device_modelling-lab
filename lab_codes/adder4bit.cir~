@@ -1,0 +1,24 @@
+*4 BIT ADDER
+.include 1bitadr.cir
+B1 2 3 1 4 5 18 1bitadr
+B2 6 7 5 8 9 18 1bitadr
+B3 10 11 9 12 13 18 1bitadr
+B4 14 15 13 16 17 18 1bitadr
+Vdd 18 0 DC 5V
+V2 1 0 PULSE (0 5 5n 0n 0n 45n 70n)
+V3 2 0 PULSE (0 5 5n 0n 0n 40n 70n)
+V1 7 0 PULSE (0 5 5n 0n 0n 35n 70n)
+V6 1 0 PULSE (0 5 5n 0n 0n 30n 70n)
+V7 2 0 PULSE (0 5 5n 0n 0n 25n 70n)
+V10 1 0 PULSE (0 5 5n 0n 0n 20n 70n)
+V11 2 0 PULSE (0 5 5n 0n 0n 15n 70n)
+V14 1 0 PULSE (0 5 5n 0n 0n 10n 70n)
+V15 2 0 PULSE (0 5 5n 0n 0n 5n 70n)
+.tran 1n 100n
+.control
+run
+display
+plot V(2) V(3) V(1) V(6) V(7) V(10) V(11) V(14) V(15)
+plot V(4) V(8) V(12) V(16) V(17)
+.endc
+.end

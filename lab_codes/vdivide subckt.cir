@@ -1,0 +1,5 @@
+*vdivide.cir
+.subckt vdivide 1 2 3
+R1 1 2 5k
+R2 2 3 10k
+.ends vdivide

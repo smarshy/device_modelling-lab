@@ -1,0 +1,11 @@
+*NAND SUBCIRCUIT
+.subckt nand 1 2 4 3
+M1 4 1 3 3 MOS1
+M2 4 2 3 3 MOS2
+M3 4 2 5 5 MOS3
+M4 5 1 0 0 MOS4
+.model MOS1 PMOS
+.model MOS2 PMOS
+.model MOS3 NMOS
+.model MOS4 NMOS
+.ends nand

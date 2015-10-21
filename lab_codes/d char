@@ -1,0 +1,11 @@
+* diode characteristics
+D1 1 2 0.7
+R1 2 0 10k
+Vx 1 2 0V
+.dc Vin 0 5 0.1
+.control
+run
+display
+plot Vx#branch
+.endc
+.end

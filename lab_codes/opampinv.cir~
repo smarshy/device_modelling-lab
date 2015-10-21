@@ -1,0 +1,14 @@
+*opamp inverter
+.include opamp.cir
+Xdiv1 2 3 0 5 opamp
+R1 1 2 10k
+R2 3 0 6.67k
+Rf 2 5 20k
+Vin 1 0 sin(0 1 1k)
+.tran 10u 1m
+.control
+run
+display
+plot V(1) V(5)
+.endc
+.end

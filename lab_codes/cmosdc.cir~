@@ -1,0 +1,14 @@
+*CMOS invertor dc
+Vin 1 0 DC 5
+Vdd 2 0 DC 5
+M1 3 1 2 2 MOS1
+.model MOS1 PMOS
+M2 3 1 0 0 MOS2
+.model MOS2 NMOS
+.dc 0V 5V 0.1
+.control
+run
+display
+plot V(1) V(3)
+.endc
+.end

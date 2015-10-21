@@ -1,0 +1,16 @@
+*rc vdivide
+.include vdivide.cir
+.temp 70
+.param CN=0.01n
+.MODEL newres R tc1=0.02 tc2=0.04
+Xdiv1 2 3 0 vdivide
+R0 1 2 1k newres
+C1 2 0 {CN}
+Vin 1 0 PULSE (0 5 100n 10n 10n 50n 170n)
+.tran 10n 500n
+.control
+run
+display
+plot v(1) v(2) v(3) v(2,3)
+.endc
+.end

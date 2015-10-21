@@ -1,0 +1,21 @@
+*commonemitter
+Vin 1 0 sin(0 1m 5k)
+C1 1 2 1u
+R1 2 3 20k
+R2 2 0 5k
+Rc 3 4 1.2k
+Re 5 0 220
+Rl 6 0 2k
+C2 4 6 10u
+Ce 5 0 10u
+Vcc 3 0 DC 12V
+Q1 4 2 5 QMOD1
+.model QMOD1 NPN
+.tran 5u 1m
+.control
+run
+display
+plot V(1)
+plot V(6)
+.endc
+.end

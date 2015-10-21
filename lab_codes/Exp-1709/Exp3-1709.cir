@@ -1,0 +1,13 @@
+*Clamper
+Vin 1 0 sin(0 10 60)
+C1 1 2 1u
+D 0 2
+.tran 10u 50m
+.control
+run
+display
+plot v(2)
+
+.endc
+.end
+

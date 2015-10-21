@@ -1,0 +1,15 @@
+*Clipper
+Vin 1 0 sin(0 3 50)
+R1 1 2 2
+D1 2 0 
+
+D2 0 2	
+
+
+.tran 10u 50m
+.control
+run
+display
+plot v(2)
+.endc
+.end

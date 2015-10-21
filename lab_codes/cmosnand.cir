@@ -1,0 +1,19 @@
+*CMOS NAND
+Va 1 0 PULSE (0 1 10n 0n 0n 25n 70n)
+Vb 2 0 PULSE (0 1 5n 0n 0n 20n 70n)
+Vdd 3 0 DC 1V
+M1 4 1 3 3 MOS1
+M2 4 2 3 3 MOS2
+M3 4 2 5 5 MOS3
+M4 5 1 0 0 MOS4
+.model MOS1 PMOS
+.model MOS2 PMOS
+.model MOS3 NMOS
+.model MOS4 NMOS
+.tran 1n 100n
+.control
+run
+display
+plot V(1) V(2) V(4)
+.endc
+.end
